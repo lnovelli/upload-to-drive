@@ -1,20 +1,18 @@
 {
   "name": "upload-to-drive",
   "version": "1.0.0",
-  "description": "Github action to upload files or folders to Google Drive",
+  "description": "Updates a file, existing in Google Drive, with a local one",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Jodebu/upload-to-drive"
+    "url": "https://github.com/lnovelli/upload-to-drive"
   },
   "main": "index.js",
   "scripts": {
     "build": "ncc build index.js -C -m -o dist"
   },
-  "author": "Yayo Acosta",
-  "license": "ISC",
+  "author": "Ludovico Novelli",
   "dependencies": {
     "@actions/core": "^1.2.4",
-    "archiver": "^4.0.1",
     "googleapis": "^51.0.0"
   },
   "devDependencies": {

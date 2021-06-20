@@ -1,23 +1,19 @@
-name: 'Upload to Google Drive'
-description: 'Uploads a file or a folder to Google Drive'
-author: 'Yayo Acosta'
+name: 'Update file in Google Drive'
+description: 'Updates a file, existing in Google Drive, with a local one'
+author: 'Ludovico Novelli'
 inputs: 
   credentials:
     description: 'Google Service Account credentials'
     required: true
-  folder:
-    description: 'Google Drive folder ID to upload the file/folder to'
+  localFileToUpload:
+    description: 'Local file to upload to GDrive'
     required: true
-  target:
-    description: 'Local path to the file/folder to upload'
+  remoteFileId:
+    description: 'Remote file id to update with local file'
     required: true
-  name:
-    description: 'Optional name for the zipped file'
-    required: false
-    default: null
-outputs:
-  link:
-    description: 'A link to the Drive folder'
+  remoteFileName:
+    description: 'Name to assign to the new remote file, once uploaded'
+    required: true
 runs:
   using: 'node12'
   main: 'dist/index.js'
